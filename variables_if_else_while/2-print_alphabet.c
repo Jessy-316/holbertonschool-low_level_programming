@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <ctype.h>
 
 int main()
 {
-    for (int x = 'A'; x <= 'Z'; x++)
+    for (int x = 'a'; x <= 'z'; x++)
     {
-        putchar(tolower(x));
+        putchar(x);
     }
-    putchar('\n');
+    putchar('\n');  // Print a newline at the end
     return 0;
 }
