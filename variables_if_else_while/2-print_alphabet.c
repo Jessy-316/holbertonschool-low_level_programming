@@ -1,11 +1,22 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-    for (int x = 'a'; x <= 'z'; x++)
-    {
-        putchar(x);
-    }
-    putchar('\n');  // Print a newline at the end
-    return 0;
+	int i = 0;
+	char c = 'a';
+
+	while (i < 26)
+	{
+		putchar(c);
+		i++, c++;
+	}
+
+	putchar('\n');
+
+	return (0);
 }
