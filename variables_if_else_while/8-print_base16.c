@@ -7,22 +7,21 @@
  */
 int main(void)
 {
-	char l = '0';
-	char p = 'a';
+	char n = '0';
+	char t = 'a';
 
-	while (l <= '9')
+	while (n <= '9')
 	{
-		putchar(l);
-		l++;
+		putchar(n);
+		n++;
 	}
-	while (p <= 'f')
+	while (t <= 'f')
 	{
-		putchar(p);
-		p++;
+		putchar(t);
+		t++;
 	}
 
 	putchar('\n');
 
-	Return(0);
-
+	return (0);
 }
