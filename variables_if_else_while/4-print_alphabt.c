@@ -12,16 +12,15 @@ int main(void)
 
 	while (i < 26)
 	{
-		putchar(c);
+		if (c != 'e' && c != 'q')
+		{
+			putchar(c);
 			i++, c++;
-	}
-		if (i != 'e' && i != 'q')
-	{
-		putchar(c);
-	}
+		}
 		else
-	{
-		i++, c++;
+		{
+			i++, c++;
+		}
 	}
 
 	putchar('\n');
