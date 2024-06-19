@@ -4,9 +4,11 @@
  *
  * Return 0 (Success)
  */
-int main(void)
+int _putchar(char c)
 {
-	printf("_putchar\n");
+	printf("_putchar");
+
+	putchar('\n');
 	return (0);
 
 }
