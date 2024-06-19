@@ -9,18 +9,15 @@ void print_alphabet_x10(void)
 	int i = 0;
 	char c = 'a';
 
-	while (i < 26)
+	while (i < 9)
 	{
-		_putchar(c);
-		i++, c++;
-	}
-
-		i = 0;
-
-		while (i < 9)
+		if (i < 26)
 		{
-			_putchar('\n');
+			_putchar(c);
+			i++, c++;
 		}
+	_putchar('\n');
+	}
 
 	_putchar('\n');
 }
