@@ -14,7 +14,10 @@ void print_alphabet_x10(void)
 		_putchar(c);
 		i++, c++;
 	}
-	while (i == 26)
+	
+	i = 0;
+
+	while (i < 9)
 	{
 		_putchar('\n');
 	}
