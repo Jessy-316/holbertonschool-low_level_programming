@@ -4,6 +4,7 @@
  * _strncpy - Copies a string.
  * @dest: Destination for the copied string.
  * @src: String to copy.
+ * @n: Number of characters to copy.
  *
  * Return: Result of the copied string.
  */
