@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * find_root - Calculates a variable to run with n.
+ * find_root - Calculates i**i to check with n.
  * @n: Base number.
- * @i: Iterator.
+ * @i: Iterator number.
  * Return: i.
  */
 int find_root(int n, int i)
@@ -15,10 +15,10 @@ int find_root(int n, int i)
 		return (-1);
 }
 /**
- * _sqrt_recursion - Finds the natural square root of a number.
- * @n: Number to find the natural square root.
+ * _sqrt_recursion - Calculates the natural square root of n.
+ * @n: Base number.
  *
- * Return: The natural square root of n.
+ * Return: The square root of n.
  */
 int _sqrt_recursion(int n)
 {
