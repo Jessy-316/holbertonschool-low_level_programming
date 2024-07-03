@@ -2,6 +2,11 @@
 #include <stdlib.h>
 
 /**
+ * str_concat - Allocates space for concatenating strings.
+ * @s1: First string to concatenate.
+ * @s2: Second string to concatenate.
+ *
+ * Return: Both strings concatenated.
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -20,16 +25,16 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	x = malloc(sizeof(char) * (i - 1 + j + 1));
+	x = malloc(sizeof(char) * (i + j + 1));
 
 	if (x == NULL)
 		return (NULL);
 
-	for (k = 0; x[k] != '\0'; k++)
+	for (k = 0; s1[k] != '\0'; k++)
 		x[k] = s1[k];
 
-	for (x[l] = s1[k] - 1; x[l] != '\0'; l++)
-		x[l] = s2[l];
+	for (l = 0; s2[l] != '\0'; l++, k++)
+		x[k] = s2[l];
 
 	return (x);
 }
