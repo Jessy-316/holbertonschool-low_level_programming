@@ -4,7 +4,7 @@
 /**
  * array_range - Creates an array of integers.
  * @min: Start (min) of range of values to include.
- * @max Max of range of values to include.
+ * @max: Max of range of values to include.
  *
  * Return: Pointer to newly created array or NULL.
  */
