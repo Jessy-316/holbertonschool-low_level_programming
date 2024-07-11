@@ -1,5 +1,6 @@
-#include "function_pointers.h"
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * op_add - Adds the value of both integers.
  * @a: First integers.
