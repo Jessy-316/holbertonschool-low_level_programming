@@ -53,7 +53,27 @@ void print_all(const char * const format, ...)
 	va_list print;
 	char *var;
 
+	check storage[] = {
+		{ "c", printchar },
+		{ "f", printfloat },
+		{ "s", printstr },
+		{ "i", printint }
+	};
+
+	i = 0;
+	var = "";
 	va_start(print, format);
-	va_end(print);
+	while (format != NULL && format[i / 4] != '\0')
+	{
+		j = i % 4;
+		if (storage[j].type[0] == format[i / 4])
+		{
+			printf("%s", var);
+			storage[j].f(print);
+			var = ", ";
+		}
+		i++;
+	}
 	printf("\n");
+	va_end(print);
 }
