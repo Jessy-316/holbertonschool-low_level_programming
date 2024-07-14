@@ -1,37 +1,38 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-#include <string.h>
 
 /**
- * printchar - Prints a char type element from va_list.
+ * print_char - Prints a char type element from va_list.
  * @list: va_list passed to function.
  */
-void printchar(va_list print)
+void print_char(va_list print)
 {
 	printf("%c", va_arg(print, int));
 }
 
 /**
- * printint - Prints an integer type element from va_list.
+ * print_int - Prints an integer type element from va_list.
  * @list: va_list passed to function.
  */
-void printint(va_list print)
+void print_int(va_list print)
 {
 	printf("%d", va_arg(print, int));
 }
 
 /**
- * printfloat - Prints a float type element from va_list.
+ * print_float - Prints a float type element from va_list.
  * @list: va_list passed to function.
  */
-void printfloat(va_list print)
+void print_float(va_list print)
 {
 	printf("%f", va_arg(print, double));
 }
 
 /**
+ * print_str - Prints a a string element from va_list.
+ * @list: va_list passed to function.
  */
-void printstr(va_list print)
+void print_str(va_list print)
 {
 	char *s;
 
