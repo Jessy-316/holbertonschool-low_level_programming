@@ -1,42 +1,43 @@
 #include "variadic_functions.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
  * print_char - Prints a char type element from va_list.
  * @list: va_list passed to function.
  */
-void print_char(va_list print)
+void print_char(va_list list)
 {
-	printf("%c", va_arg(print, int));
+	printf("%c", va_arg(list, int));
 }
 
 /**
  * print_int - Prints an integer type element from va_list.
  * @list: va_list passed to function.
  */
-void print_int(va_list print)
+void print_int(va_list list)
 {
-	printf("%d", va_arg(print, int));
+	printf("%d", va_arg(list, int));
 }
 
 /**
  * print_float - Prints a float type element from va_list.
  * @list: va_list passed to function.
  */
-void print_float(va_list print)
+void print_float(va_list list)
 {
-	printf("%f", va_arg(print, double));
+	printf("%f", va_arg(list, double));
 }
 
 /**
  * print_str - Prints a a string element from va_list.
  * @list: va_list passed to function.
  */
-void print_str(va_list print)
+void print_str(va_list list)
 {
 	char *s;
 
-	s = va_arg(print, char *);
+	s = va_arg(list, char *);
 	if (s == NULL)
 		s = "(nil)";
 	printf("%s", s);
@@ -55,10 +56,10 @@ void print_all(const char * const format, ...)
 	char *var;
 
 	check storage[] = {
-		{ "c", printchar },
-		{ "f", printfloat },
-		{ "s", printstr },
-		{ "i", printint }
+		{ "c", print_char },
+		{ "f", print_float },
+		{ "s", print_str },
+		{ "i", print_int }
 	};
 
 	i = 0;
