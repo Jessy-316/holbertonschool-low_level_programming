@@ -9,7 +9,6 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fildes;
-	char *temp = text_content;
 	ssize_t byteswritten, length = 0;
 
 	if (filename == NULL)
@@ -23,19 +22,18 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content != NULL)
 	{
-		while (*temp != '\0')
+		while (text_content[length] != '\0')
 		{
-			length++, temp++;
+			length++;
 		}
-
-	}
-	if (length > 0 && text_content != NULL)
-	{
-		byteswritten = write(fildes, text_content, length);
-		if (byteswritten != length)
+		if (length > 0)
 		{
-			close(fildes);
-			return (-1);
+			byteswritten = write(fildes, text_content, length);
+			if (byteswritten != length)
+			{
+				close(fildes);
+				return (-1);
+			}
 		}
 	}
 	close(fildes);
