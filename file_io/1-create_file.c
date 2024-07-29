@@ -21,6 +21,10 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	if (chmod(filename, S_IWUSR) == -1)
+	{
+		return (-1);
+	}
 	if (text_content != NULL)
 	{
 		while (*temp != '\0')
